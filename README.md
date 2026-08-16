@@ -166,7 +166,13 @@ RECEIVED
 
 ## 展示网站
 
-`web/` 将提供一页式编辑型项目案例：真实问题、Agent 协作、核心 Skill、安全机制、运行证据、团队与项目积累。页面使用原创配图，任何情境图都会明确标注为概念演绎，不冒充真实活动证据。
+`web/` 是已经完成的一页式编辑型项目案例，涵盖真实问题、Agent 协作、核心 Skill、安全机制、运行证据、团队与项目积累。网页为原生 HTML/CSS/JavaScript，零构建依赖：
+
+```bash
+python3 -m http.server 4173 --directory web
+```
+
+浏览器打开 <http://127.0.0.1:4173> 即可预览。三张情境图由 GPT Image 2 生成，页面中均明确标注为“概念演绎”；仪表盘图片来自可运行 MVP，场景数据为虚构模拟。详细说明见 [`web/README.md`](web/README.md)。
 
 ## 团队
 
@@ -179,6 +185,7 @@ RECEIVED
 - [x] 确定性多 Agent MVP、审批门与证据链。
 - [x] Local/HTTP Event Gateway 与自动化测试。
 - [x] AgentTeams Team Spec、Skills 和创建消息。
+- [x] 响应式项目展示网页与 Image 2 概念配图。
 - [ ] 实时音频/字幕适配器与授权资料 RAG。
 - [ ] AgentTeams Worker、延迟/成本/稳定性评测。
 - [ ] 30 秒应急演练、2–3 分钟演示视频与授权活动试点。

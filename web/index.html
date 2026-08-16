@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="舆情宝 LivePR：面向发布会、论坛、直播与大型活动的现场舆情监测和主持决策 Agent Team。"
+    />
+    <meta name="theme-color" content="#f3f0e9" />
+    <meta property="og:title" content="舆情宝 LivePR｜现场决策 Agent Team" />
+    <meta
+      property="og:description"
+      content="发现风险、核查授权、人工审批，再把安全的补救台词交给主持人。"
+    />
+    <meta property="og:image" content="assets/livepr-hero.jpg" />
+    <title>舆情宝 LivePR｜现场决策 Agent Team</title>
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d0d0d'/%3E%3Cpath d='M15 42V30h6v12zm14 0V14h7v28zm15 0V23h6v19z' fill='%23ff5a1f'/%3E%3C/svg%3E"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" defer></script>
+  </head>
+
+  <body>
+    <div class="reading-progress" aria-hidden="true"><span></span></div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="返回 LivePR 页面顶部">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>LIVEPR / 舆情宝</span>
+      </a>
+
+      <nav class="header-actions" aria-label="主要导航">
+        <span class="verified-label"><span></span>MVP VERIFIED</span>
+        <a
+          class="text-link"
+          href="https://github.com/paofuxiaomiao/livepr-agent-team"
+          target="_blank"
+          rel="noreferrer"
+          >GitHub ↗</a
+        >
+        <a class="header-cta" href="#evidence">查看运行证据</a>
+        <button class="menu-button" type="button" aria-label="打开章节目录" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+      </nav>
+    </header>
+
+    <div class="mobile-menu" aria-hidden="true">
+      <p>INDEX / 章节</p>
+      <nav aria-label="移动端章节目录">
+        <a href="#origin">01 项目起源</a>
+        <a href="#incident">02 现场时刻</a>
+        <a href="#system">03 决策闭环</a>
+        <a href="#agents">04 Agent 协作</a>
+        <a href="#skills">05 核心 Skills</a>
+        <a href="#safety">06 安全与审计</a>
+        <a href="#evidence">07 运行证据</a>
+        <a href="#portfolio">08 项目积累</a>
+        <a href="#team">09 团队与计划</a>
+      </nav>
+    </div>
+
+    <main id="top">
+      <section class="article-header" aria-labelledby="page-title">
+        <p class="date-line">PROJECT CASE STUDY · 16 AUG 2026</p>
+        <h1 id="page-title">
+          <span>LIVE</span>
+          <span class="title-shift">PR</span>
+        </h1>
+        <p class="title-cn">舆情宝 · 现场决策 Agent Team</p>
+        <div class="byline">
+          <span class="byline-avatar" aria-hidden="true">L</span>
+          <span>LivePR Team</span>
+          <span class="byline-rule"></span>
+          <span>Agent Infra MVP</span>
+        </div>
+      </section>
+
+      <figure class="hero-figure">
+        <div class="hero-image-wrap reveal">
+          <img
+            src="assets/livepr-hero.jpg"
+            width="1536"
+            height="1024"
+            alt="活动后台控制区内，两位工作人员监测舞台发言的概念情境图"
+          />
+          <span class="image-index">FIG. 01</span>
+        </div>
+        <figcaption>
+          <span>Image 2 / 概念演绎</span>
+          <span>现场压力是真实命题，图中人物与活动均为虚构。</span>
+        </figcaption>
+      </figure>
+
+      <div class="article-shell">
+        <article class="article-body">
+          <blockquote class="lead-quote reveal">
+            “真正缺的不是一张情绪看板，而是在几十秒内把未经许可的发言变成一段有证据、可审批、能执行的主持补救台词。”
+          </blockquote>
+
+          <section id="origin" data-section="origin">
+            <p class="section-kicker">01 / ORIGIN</p>
+            <h2>项目起源于一次来不及处理的现场意外</h2>
+            <p>
+              一次活动中，有位嘉宾临时说出未经许可的内容。现场团队需要同时判断：这句话是否超出授权、线上是否已经扩散、事实依据在哪里、主持人此刻应该澄清、安抚还是转场。传统工作方式依赖人工盯群、临时核对资料和多人串联确认，补救窗口很容易在沟通中消失。
+            </p>
+            <p>
+              LivePR 面向活动主办方、品牌公关、主持人和直播运营团队，把实时转写、评论、问卷、工作人员记录与授权资料组织成一个共享事件。AgentTeams Team Leader 将它拆给不同角色处理，只有通过事实核查与人工审批的版本，才能进入主持控制台。
+            </p>
+
+            <div class="fact-line reveal" aria-label="项目关键事实">
+              <div><strong>7</strong><span>业务 Agent</span></div>
+              <div><strong>6</strong><span>可复用 Skills</span></div>
+              <div><strong>2</strong><span>模拟事件</span></div>
+              <div><strong>4/4</strong><span>自动化测试</span></div>
+            </div>
+          </section>
+
+          <section id="incident" data-section="incident">
+            <p class="section-kicker">02 / THE MOMENT</p>
+            <h2>一段临时发言，现场只有几十秒的补救窗口</h2>
+            <p>
+              系统把“现场出事了”拆成可验证的小问题。每一步都有输入、输出、责任人和失败去向；没有证据就不继续，没有批准就不交付。
+            </p>
+
+            <div class="incident-sequence reveal" role="list" aria-label="现场应急时间线">
+              <div class="incident-row" role="listitem">
+                <time>00:00</time>
+                <div>
+                  <h3>嘉宾偏离授权内容</h3>
+                  <p>实时转写与线上反馈在同一事件中锁定高风险片段。</p>
+                </div>
+                <span>INTAKE</span>
+              </div>
+              <div class="incident-row" role="listitem">
+                <time>00:12</time>
+                <div>
+                  <h3>核查授权与事实证据</h3>
+                  <p>对照授权清单、嘉宾资料与主持预案；缺证据时明确 abstain。</p>
+                </div>
+                <span>VERIFY</span>
+              </div>
+              <div class="incident-row incident-row--hot" role="listitem">
+                <time>00:28</time>
+                <div>
+                  <h3>主持人拿到可执行补救台词</h3>
+                  <p>澄清、安抚或转场策略经具名批准后，生成短台词与禁用表达。</p>
+                </div>
+                <span>DELIVER</span>
+              </div>
+            </div>
+
+            <figure class="content-figure reveal">
+              <img
+                src="assets/livepr-host-briefing.jpg"
+                width="1536"
+                height="1024"
+                loading="lazy"
+                alt="主持人在登台前接收应急提示的概念情境图"
+              />
+              <figcaption>FIG. 02 — Image 2 概念演绎：台词由 AI 辅助生成，最终决定权属于现场人员。</figcaption>
+            </figure>
+          </section>
+
+          <section id="system" data-section="system">
+            <p class="section-kicker">03 / SYSTEM</p>
+            <h2>从“看见舆情”升级为“完成决策”</h2>
+            <p>
+              LivePR 不以情绪分数作为终点。它维护一个持续演进的 <code>EventContext</code>，让转写片段、授权状态、证据 ID、风险等级、台词版本和审批状态沿着同一条链路传递。
+            </p>
+
+            <div class="flow-composition reveal" aria-label="LivePR 决策闭环">
+              <div class="flow-source">
+                <span>INPUT / 现场信号</span>
+                <p>实时转写 · 弹幕评论 · 问卷 · 工作人员记录 · 授权事实库</p>
+              </div>
+              <div class="flow-leader">
+                <span>TEAM LEADER</span>
+                <strong>拆解 · 路由 · 仲裁 · 维护状态</strong>
+              </div>
+              <div class="flow-states">
+                <span>INTAKE</span><i>→</i><span>VERIFY</span><i>→</i><span>PLAN</span><i>→</i><span>APPROVE</span><i>→</i><span>DELIVER</span><i>→</i><span>CLOSE</span>
+              </div>
+              <div class="flow-output">
+                <span>OUTPUT / 只交付已批准版本</span>
+                <p>主持补救台词 · 实时风险大屏 · evidenceIds · 决策日志 · 复盘报告</p>
+              </div>
+            </div>
+
+            <div class="editorial-callout">
+              <span>决策原则</span>
+              <p>证据优先于流畅表达；人工审批优先于自动发布；可回滚优先于一次性生成。</p>
+            </div>
+          </section>
+
+          <section id="agents" data-section="agents">
+            <p class="section-kicker">04 / AGENT TEAM</p>
+            <h2>每个 Agent 只处理自己有权处理的问题</h2>
+            <p>
+              专职分工让系统可以被检查、替换与复用。角色之间不共享模糊的长对话，而是通过结构化事件字段、证据仓和决策日志协作。
+            </p>
+
+            <div class="agent-roster reveal">
+              <div class="agent-leader-row">
+                <span>00</span><strong>LivePR Team Leader</strong><em>任务拆解 / 路由 / 状态 / 冲突仲裁</em>
+              </div>
+              <ol>
+                <li><span>01</span><strong>Collection Agent</strong><em>现场信号归一化</em></li>
+                <li><span>02</span><strong>Trend Agent</strong><em>风险片段与趋势突变</em></li>
+                <li><span>03</span><strong>Fact Check Agent</strong><em>授权与事实证据</em></li>
+                <li><span>04</span><strong>Strategy Agent</strong><em>风险分级与响应策略</em></li>
+                <li><span>05</span><strong>Host Card Agent</strong><em>短主持台词与禁用表达</em></li>
+                <li><span>06</span><strong>Safety Agent</strong><em>审批门与越权检查</em></li>
+                <li><span>07</span><strong>Postmortem Agent</strong><em>反馈验证与事件复盘</em></li>
+              </ol>
+            </div>
+          </section>
+
+          <section id="skills" data-section="skills">
+            <p class="section-kicker">05 / SKILLS</p>
+            <h2>核心能力被封装成可测试的 Skill 契约</h2>
+            <p>
+              Skill 不是一段一次性提示词。每个 Skill 都显式定义输入、输出、依赖、失败行为、权限边界和复用场景，能够独立版本化与评测。
+            </p>
+
+            <div class="skill-stage reveal">
+              <article class="skill-contract">
+                <p class="contract-index">SKILL / 01</p>
+                <h3>trend-burst-detect</h3>
+                <dl>
+                  <div><dt>输入</dt><dd>EventContext + 归一化转写 / 评论</dd></div>
+                  <div><dt>输出</dt><dd>风险片段、时间码、样本 ID、置信度</dd></div>
+                  <div><dt>依赖</dt><dd>Event Gateway + 历史基线</dd></div>
+                  <div><dt>失败</dt><dd>数据不足或断流 → abstain / 回到 VERIFY</dd></div>
+                  <div><dt>复用</dt><dd>直播、论坛、课程、企业会议</dd></div>
+                </dl>
+              </article>
+              <article class="skill-contract skill-contract--accent">
+                <p class="contract-index">SKILL / 05</p>
+                <h3>host-card</h3>
+                <dl>
+                  <div><dt>输入</dt><dd>已核事实 + 已批准策略 + 风险等级</dd></div>
+                  <div><dt>输出</dt><dd>短台词、禁用表达、evidenceIds、版本号</dd></div>
+                  <div><dt>依赖</dt><dd>fact-check + response-plan + 人工审批</dd></div>
+                  <div><dt>失败</dt><dd>无证据或未审批 → 不生成可交付版本</dd></div>
+                  <div><dt>复用</dt><dd>主持、客服、应急沟通、直播运营</dd></div>
+                </dl>
+              </article>
+              <p class="skill-footer">risk-grade · fact-check · response-plan · postmortem</p>
+            </div>
+          </section>
+
+          <section id="safety" data-section="safety">
+            <p class="section-kicker">06 / SAFETY</p>
+            <h2>结果可验证、动作可审批、版本可回滚</h2>
+            <p>
+              Event Gateway 把不同来源转换为统一事件 Schema；MCP/HTTP 适配器负责超时、重试、幂等与权限边界；RAG 只检索活动授权清单、嘉宾资料与主持预案，并返回证据 ID。
+            </p>
+
+            <figure class="content-figure reveal">
+              <img
+                src="assets/livepr-evidence-table.jpg"
+                width="1536"
+                height="1024"
+                loading="lazy"
+                alt="转写片段、证据编号与审批材料的概念静物图"
+              />
+              <figcaption>FIG. 03 — Image 2 概念演绎：审计链由真实事件字段构成，图中文字不可读且不包含个人数据。</figcaption>
+            </figure>
+
+            <ul class="safety-list">
+              <li><strong>验证：</strong>证据覆盖、授权状态、禁用表达和版本一致性必须同时通过。</li>
+              <li><strong>审批：</strong>高风险响应由主持人或公关负责人具名确认。</li>
+              <li><strong>降级：</strong>ASR 低置信度转人工记录；RAG 无证据时明确 abstain。</li>
+              <li><strong>回滚：</strong>保留上一已批准版本，新台词可撤回且动作写入决策日志。</li>
+              <li><strong>审计：</strong>Trace ID、输入输出、证据来源、耗时、置信度、修改与交付全量留痕。</li>
+            </ul>
+          </section>
+
+          <section id="evidence" data-section="evidence">
+            <p class="section-kicker">07 / EVIDENCE</p>
+            <h2>当前 MVP 已经能运行，也能证明自己为什么停止</h2>
+            <p>
+              确定性 MVP 不依赖外部模型或 API Key。它复现完整状态机：未批准时停在 <code>awaiting_approval</code>；具名批准后进入 <code>closed</code>，并生成结果、Trace、主持卡、报告和自包含 HTML 大屏。
+            </p>
+
+            <figure class="dashboard-figure reveal">
+              <div class="dashboard-frame">
+                <div class="browser-bar"><span></span><span></span><span></span><em>LOCAL EVIDENCE / dashboard.html</em></div>
+                <img
+                  src="assets/livepr-dashboard-evidence.png"
+                  width="1920"
+                  height="1020"
+                  loading="lazy"
+                  alt="LivePR 本地模拟运行生成的自包含 HTML 大屏截图"
+                />
+              </div>
+              <figcaption>FIG. 04 — 项目真实运行截图。比例来自虚构模拟场景，仅证明流程可执行，不代表真实因果效果。</figcaption>
+            </figure>
+
+            <div class="verification-strip reveal">
+              <span>TESTS</span>
+              <strong>4 / 4 PASS</strong>
+              <span>STATE</span>
+              <strong>CLOSED</strong>
+              <span>AUTO PUBLISH</span>
+              <strong>FALSE</strong>
+            </div>
+
+            <pre class="command-block"><code>cd workspace/livepr-mvp
+python3 -m unittest discover -s tests -v
+python3 run_demo.py \
+  --scenario product_delay_rumor \
+  --approve \
+  --approved-by demo-reviewer</code></pre>
+          </section>
+
+          <section id="portfolio" data-section="portfolio">
+            <p class="section-kicker">08 / RELATED WORK</p>
+            <h2>八个真实项目，构成场景抽象与内容表达的底座</h2>
+            <p>
+              团队积累覆盖地图平台、赛事互动、文旅内容、教育培训、企业展示、技术视频和 AIGC 学习工具。以下信息来自项目应用场景信息表。
+            </p>
+
+            <ol class="project-index reveal">
+              <li><span>01</span><div><strong>OPC/FDE 个人能力地图与成果评价平台</strong><p>所在地与服务范围地图 · 能力画像 · FDE 成果证据与评分</p></div><em>场景机会</em></li>
+              <li><span>02</span><div><strong>AI 旅拍内容优选与旅行纪念册制作</strong><p>自动选片 · 人物与光线修复 · 视觉 Skill · 高清印刷输出</p></div><em>场景机会</em></li>
+              <li><span>03</span><div><strong>WorkBuddy 功能演示与新手训练平台</strong><p>高保真交互 · 模拟任务流 · 新手 / 教师双指南</p></div><em>教育培训</em></li>
+              <li><span>04</span><div><strong>化工流程可视化项目</strong><p>文档 → 脚本 / 分镜 → Image 关键帧 → HyperFrames 镜头</p></div><em>先进制造</em></li>
+              <li><span>05</span><div><strong>企展中枢</strong><p>多源解析 · OCR / 修图 · HTML / PPT 模板化 · 质量闸门</p></div><em>企业展示</em></li>
+              <li><span>06</span><div><strong>湖南省农耕文化地图</strong><p>128 处点位 · 3 条线路 · 24 件文物 · 24 个节气</p></div><em>文化科技</em></li>
+              <li><span>07</span><div><strong>湘超数字地图</strong><p>球队与城市联动 · 赛程战报 · 榜单 · 投票与线上打气</p></div><em>重大活动</em></li>
+              <li><span>08</span><div><strong>Prompt Canvas</strong><p>结构化提示词 · 时间码 · 视频同步高亮 · 差异检测</p></div><em>AIGC 工具</em></li>
+            </ol>
+          </section>
+
+          <section id="team" data-section="team">
+            <p class="section-kicker">09 / TEAM & NEXT</p>
+            <h2>现场策略、AIGC 视频与视觉内容组成完整表达闭环</h2>
+
+            <div class="team-list reveal">
+              <article>
+                <span>01</span>
+                <h3>扶瑀琪</h3>
+                <p>项目负责人 · 产品与现场策略</p>
+                <em>地理信息测绘 / 湘超数字地图设计</em>
+              </article>
+              <article>
+                <span>02</span>
+                <h3>欧阳劲汝</h3>
+                <p>AIGC 视频制作</p>
+                <em>视频创意、AI 素材与动态影像</em>
+              </article>
+              <article>
+                <span>03</span>
+                <h3>张佳佳</h3>
+                <p>视觉内容负责人 · AIGC 内容主创</p>
+                <em>视觉方案、分镜、剪辑与动态特效</em>
+              </article>
+            </div>
+
+            <h3 class="next-title">接下来，把确定性 MVP 变成真实 AgentTeams Demo</h3>
+            <div class="roadmap">
+              <div><span>M1</span><p>接入实时音频 / 字幕与授权资料 RAG</p></div>
+              <div><span>M2</span><p>替换为 AgentTeams Worker，评测延迟、成本与稳定性</p></div>
+              <div><span>M3</span><p>完成 30 秒应急演练、2–3 分钟演示视频与授权活动试点</p></div>
+            </div>
+
+            <div class="closing-callout reveal">
+              <p>LivePR 不替主持人做决定。它把复杂现场压缩成一份可核、可批、可说出口的选择。</p>
+              <a href="https://github.com/paofuxiaomiao/livepr-agent-team" target="_blank" rel="noreferrer">查看项目代码 ↗</a>
+            </div>
+          </section>
+
+          <footer class="article-footer">
+            <div class="footer-brand"><span>L</span><div><strong>舆情宝 LIVEPR</strong><p>Evidence before eloquence.</p></div></div>
+            <p>原创代码采用 Apache-2.0。任何真实部署均需完成数据授权、隐私脱敏、人员培训和人工审批配置。</p>
+            <div class="footer-links">
+              <a href="https://github.com/paofuxiaomiao/livepr-agent-team" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="#top">Back to top ↑</a>
+            </div>
+          </footer>
+        </article>
+
+        <aside class="section-index" aria-label="章节目录">
+          <nav>
+            <p>INDEX / 章节</p>
+            <ol>
+              <li><a class="active" data-target="origin" href="#origin"><span>01</span>项目起源</a></li>
+              <li><a data-target="incident" href="#incident"><span>02</span>现场时刻</a></li>
+              <li><a data-target="system" href="#system"><span>03</span>决策闭环</a></li>
+              <li><a data-target="agents" href="#agents"><span>04</span>Agent 协作</a></li>
+              <li><a data-target="skills" href="#skills"><span>05</span>核心 Skills</a></li>
+              <li><a data-target="safety" href="#safety"><span>06</span>安全与审计</a></li>
+              <li><a data-target="evidence" href="#evidence"><span>07</span>运行证据</a></li>
+              <li><a data-target="portfolio" href="#portfolio"><span>08</span>项目积累</a></li>
+              <li><a data-target="team" href="#team"><span>09</span>团队与计划</a></li>
+            </ol>
+
+            <div class="index-meta">
+              <span>STATUS</span><strong>VERIFIED MVP</strong>
+              <span>LICENSE</span><strong>APACHE-2.0</strong>
+              <a href="https://github.com/paofuxiaomiao/livepr-agent-team" target="_blank" rel="noreferrer">VIEW SOURCE ↗</a>
+            </div>
+          </nav>
+        </aside>
+      </div>
+    </main>
+  </body>
+</html>
