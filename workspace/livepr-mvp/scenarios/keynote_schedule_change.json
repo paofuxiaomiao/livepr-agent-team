@@ -1,0 +1,56 @@
+{
+  "scenario_id": "keynote_schedule_change",
+  "title": "主讲嘉宾临时延迟引发不满",
+  "event": {
+    "event_id": "EVT-LIVEPR-002",
+    "title": "主讲嘉宾临时延迟引发不满",
+    "venue": "模拟行业论坛",
+    "host_card_lead": "向大家同步一项议程调整：",
+    "host_card_close": "感谢理解，现场问题将由工作人员继续收集。"
+  },
+  "focus_fact_id": "FACT-AGENDA-001",
+  "facts": [
+    {
+      "fact_id": "FACT-AGENDA-001",
+      "status": "confirmed",
+      "claim": "主讲嘉宾将延迟30分钟到场",
+      "truth": "嘉宾交通延误，预计延迟30分钟；备用圆桌将提前开始。",
+      "source": "模拟会务调度台 / 议程变更单",
+      "confidence": 0.98,
+      "response_points": [
+        "主讲嘉宾预计延迟30分钟",
+        "备用圆桌将提前开始",
+        "原定主题和问答时长保持不变"
+      ]
+    }
+  ],
+  "events": [
+    {"id":"K-001","ts":"2026-08-16T09:00:01+08:00","source":"audience_form","topic":"agenda","sentiment":"negative","text":"为什么嘉宾还没来？"},
+    {"id":"K-002","ts":"2026-08-16T09:00:05+08:00","source":"live_chat","topic":"agenda","sentiment":"negative","text":"议程是不是取消了"},
+    {"id":"K-003","ts":"2026-08-16T09:00:08+08:00","source":"staff_note","topic":"agenda","sentiment":"neutral","text":"入口咨询数量上升"},
+    {"id":"K-004","ts":"2026-08-16T09:00:12+08:00","source":"live_chat","topic":"agenda","sentiment":"negative","text":"至少应该说明一下"},
+    {"id":"K-005","ts":"2026-08-16T09:00:15+08:00","source":"audience_form","topic":"agenda","sentiment":"negative","text":"特意赶来听主旨演讲"},
+    {"id":"K-006","ts":"2026-08-16T09:00:18+08:00","source":"live_chat","topic":"agenda","sentiment":"neutral","text":"可以先安排圆桌吗"},
+    {"id":"K-007","ts":"2026-08-16T09:00:21+08:00","source":"live_chat","topic":"agenda","sentiment":"negative","text":"需要一个明确时间"},
+    {"id":"K-008","ts":"2026-08-16T09:00:24+08:00","source":"staff_note","topic":"agenda","sentiment":"positive","text":"备用圆桌嘉宾已就位"},
+    {"id":"K-009","ts":"2026-08-16T09:00:28+08:00","source":"live_chat","topic":"agenda","sentiment":"negative","text":"希望不要压缩问答"},
+    {"id":"K-010","ts":"2026-08-16T09:00:31+08:00","source":"audience_form","topic":"agenda","sentiment":"positive","text":"只要主题和问答保留即可"}
+  ],
+  "feedback_events": [
+    {"id":"KF-001","ts":"2026-08-16T09:02:01+08:00","source":"live_chat","topic":"agenda","sentiment":"positive","text":"提前圆桌可以接受"},
+    {"id":"KF-002","ts":"2026-08-16T09:02:05+08:00","source":"audience_form","topic":"agenda","sentiment":"neutral","text":"已了解延迟时间"},
+    {"id":"KF-003","ts":"2026-08-16T09:02:08+08:00","source":"live_chat","topic":"agenda","sentiment":"positive","text":"问答时长不变就好"},
+    {"id":"KF-004","ts":"2026-08-16T09:02:12+08:00","source":"live_chat","topic":"agenda","sentiment":"negative","text":"仍然希望准时"},
+    {"id":"KF-005","ts":"2026-08-16T09:02:15+08:00","source":"staff_note","topic":"agenda","sentiment":"neutral","text":"入口咨询数量下降"},
+    {"id":"KF-006","ts":"2026-08-16T09:02:18+08:00","source":"live_chat","topic":"agenda","sentiment":"positive","text":"安排透明就没问题"},
+    {"id":"KF-007","ts":"2026-08-16T09:02:21+08:00","source":"audience_form","topic":"agenda","sentiment":"neutral","text":"等待主旨演讲"},
+    {"id":"KF-008","ts":"2026-08-16T09:02:24+08:00","source":"staff_note","topic":"agenda","sentiment":"positive","text":"圆桌顺利开始"}
+  ],
+  "prohibited_terms": ["嘉宾一定准时", "保证不再调整", "不用担心"],
+  "expected": {
+    "risk_level": "P1",
+    "fact_status": "confirmed",
+    "recommended_strategy_id": "S1",
+    "closed_after_approval": true
+  }
+}

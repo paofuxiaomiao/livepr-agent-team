@@ -1,0 +1,69 @@
+{
+  "scenario_id": "product_delay_rumor",
+  "title": "新品发布时间被误解为延期",
+  "event": {
+    "event_id": "EVT-LIVEPR-001",
+    "title": "新品发布时间被误解为延期",
+    "venue": "模拟新品发布会",
+    "host_card_lead": "刚才关于发布时间的表述可能造成误解，这里统一澄清：",
+    "host_card_close": "我们会持续记录现场问题，详细信息请以现场大屏和官方计划为准。"
+  },
+  "focus_fact_id": "FACT-RELEASE-001",
+  "facts": [
+    {
+      "fact_id": "FACT-RELEASE-001",
+      "status": "misleading",
+      "claim": "新品整体延期三个月",
+      "truth": "产品没有整体延期；邀请测试于9月1日开始，公开发布计划为10月15日。",
+      "source": "模拟活动事实库 / 发布计划 v3",
+      "confidence": 0.99,
+      "response_points": [
+        "产品没有整体延期",
+        "邀请测试于9月1日开始",
+        "公开发布计划为10月15日"
+      ]
+    },
+    {
+      "fact_id": "FACT-RELEASE-002",
+      "status": "confirmed",
+      "claim": "主持人口误使用了“下季度全面上线”",
+      "truth": "主持人口播文本与审核版不一致，已由导播台确认。",
+      "source": "模拟导播记录 / 主持稿对比",
+      "confidence": 0.97,
+      "response_points": ["主持人口播与审核版存在偏差"]
+    }
+  ],
+  "events": [
+    {"id":"E-001","ts":"2026-08-16T14:00:01+08:00","source":"live_chat","topic":"release_schedule","sentiment":"neutral","text":"刚才说什么时候开放测试？"},
+    {"id":"E-002","ts":"2026-08-16T14:00:05+08:00","source":"audience_form","topic":"release_schedule","sentiment":"negative","text":"是不是又延期了？"},
+    {"id":"E-003","ts":"2026-08-16T14:00:08+08:00","source":"live_chat","topic":"release_schedule","sentiment":"negative","text":"宣传说下月，现在变成下季度？"},
+    {"id":"E-004","ts":"2026-08-16T14:00:12+08:00","source":"staff_note","topic":"release_schedule","sentiment":"neutral","text":"现场连续有人举手询问发布时间"},
+    {"id":"E-005","ts":"2026-08-16T14:00:15+08:00","source":"live_chat","topic":"release_schedule","sentiment":"negative","text":"这不是延期三个月吗"},
+    {"id":"E-006","ts":"2026-08-16T14:00:18+08:00","source":"live_chat","topic":"release_schedule","sentiment":"negative","text":"主持人口径和大屏不一致"},
+    {"id":"E-007","ts":"2026-08-16T14:00:21+08:00","source":"audience_form","topic":"release_schedule","sentiment":"negative","text":"请给一个明确日期"},
+    {"id":"E-008","ts":"2026-08-16T14:00:24+08:00","source":"live_chat","topic":"release_schedule","sentiment":"negative","text":"感觉在回避问题"},
+    {"id":"E-009","ts":"2026-08-16T14:00:28+08:00","source":"staff_note","topic":"release_schedule","sentiment":"negative","text":"导播提示评论区负面集中"},
+    {"id":"E-010","ts":"2026-08-16T14:00:31+08:00","source":"live_chat","topic":"product_demo","sentiment":"positive","text":"演示效果不错，希望尽快体验"},
+    {"id":"E-011","ts":"2026-08-16T14:00:35+08:00","source":"live_chat","topic":"release_schedule","sentiment":"negative","text":"到底是9月还是10月？"},
+    {"id":"E-012","ts":"2026-08-16T14:00:38+08:00","source":"audience_form","topic":"release_schedule","sentiment":"positive","text":"如果能明确测试和发布两个日期就好"}
+  ],
+  "feedback_events": [
+    {"id":"F-001","ts":"2026-08-16T14:02:01+08:00","source":"live_chat","topic":"release_schedule","sentiment":"positive","text":"明白了，是测试和正式发布两个日期"},
+    {"id":"F-002","ts":"2026-08-16T14:02:05+08:00","source":"audience_form","topic":"release_schedule","sentiment":"neutral","text":"已记录10月15日"},
+    {"id":"F-003","ts":"2026-08-16T14:02:08+08:00","source":"live_chat","topic":"release_schedule","sentiment":"positive","text":"这次解释清楚了"},
+    {"id":"F-004","ts":"2026-08-16T14:02:12+08:00","source":"live_chat","topic":"release_schedule","sentiment":"negative","text":"为什么刚才会说错？"},
+    {"id":"F-005","ts":"2026-08-16T14:02:15+08:00","source":"staff_note","topic":"release_schedule","sentiment":"neutral","text":"举手询问数量下降"},
+    {"id":"F-006","ts":"2026-08-16T14:02:18+08:00","source":"live_chat","topic":"release_schedule","sentiment":"positive","text":"期待9月测试"},
+    {"id":"F-007","ts":"2026-08-16T14:02:21+08:00","source":"audience_form","topic":"release_schedule","sentiment":"neutral","text":"希望会后发完整时间表"},
+    {"id":"F-008","ts":"2026-08-16T14:02:24+08:00","source":"live_chat","topic":"release_schedule","sentiment":"negative","text":"仍然担心后续变化"},
+    {"id":"F-009","ts":"2026-08-16T14:02:28+08:00","source":"live_chat","topic":"release_schedule","sentiment":"positive","text":"官方计划清晰就可以"},
+    {"id":"F-010","ts":"2026-08-16T14:02:31+08:00","source":"staff_note","topic":"release_schedule","sentiment":"neutral","text":"现场议程恢复"}
+  ],
+  "prohibited_terms": ["绝对不会延期", "百分之百保证", "不用担心"],
+  "expected": {
+    "risk_level": "P1",
+    "fact_status": "misleading",
+    "recommended_strategy_id": "S1",
+    "closed_after_approval": true
+  }
+}

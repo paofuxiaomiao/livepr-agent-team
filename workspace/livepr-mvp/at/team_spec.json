@@ -1,0 +1,51 @@
+{
+  "team": {
+    "name": "livepr-on-site-pr-team",
+    "version": "0.1.0",
+    "description": "On-site public-opinion monitoring and presenter decision loop.",
+    "team_leader": {
+      "id": "livepr-team-leader",
+      "creation": "dedicated worker created by AgentTeams manager during Team creation"
+    },
+    "creation_policy": {
+      "mode": "serial",
+      "order": [
+        "collection-agent",
+        "trend-agent",
+        "fact-check-agent",
+        "strategy-agent",
+        "host-card-agent",
+        "safety-agent",
+        "postmortem-agent",
+        "team"
+      ]
+    },
+    "tool_gateway": {
+      "transport": "http",
+      "base_url": "http://<TOOL_HOST_REACHABLE_BY_WORKER>:18090",
+      "health": "GET /health",
+      "resources": [
+        "GET /scenarios/{scenario_id}/event",
+        "GET /scenarios/{scenario_id}/events",
+        "GET /scenarios/{scenario_id}/facts",
+        "GET /scenarios/{scenario_id}/feedback",
+        "GET /scenarios/{scenario_id}/policy"
+      ]
+    }
+  },
+  "agents": [
+    {"id":"collection-agent","skills":[],"adapters":["event-normalize"],"tools":["event.get","events.list"]},
+    {"id":"trend-agent","skills":["trend-burst-detect"],"tools":[]},
+    {"id":"fact-check-agent","skills":["fact-check"],"tools":["facts.list","policy.get"]},
+    {"id":"strategy-agent","skills":["risk-grade","response-plan"],"tools":[]},
+    {"id":"host-card-agent","skills":["host-card"],"tools":[]},
+    {"id":"safety-agent","skills":["risk-grade","host-card"],"tools":["policy.get"]},
+    {"id":"postmortem-agent","skills":["postmortem"],"tools":["feedback.list"]}
+  ],
+  "invariants": [
+    "No host card without evidence_fact_ids.",
+    "No P1 or P2 delivery without named human approval.",
+    "No automatic external publishing.",
+    "Insufficient evidence must not be converted into a factual conclusion."
+  ]
+}

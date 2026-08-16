@@ -1,0 +1,15 @@
+{
+  "service": "livepr-mock-event-gateway",
+  "version": "1.0.0",
+  "base_url": "http://<host>:18090",
+  "tools": [
+    {"name":"health","method":"GET","path":"/health","output":"service status"},
+    {"name":"scenarios.list","method":"GET","path":"/scenarios","output":"scenario IDs"},
+    {"name":"event.get","method":"GET","path":"/scenarios/{scenario_id}/event","output":"event metadata"},
+    {"name":"events.list","method":"GET","path":"/scenarios/{scenario_id}/events","output":"normalized event stream"},
+    {"name":"facts.list","method":"GET","path":"/scenarios/{scenario_id}/facts","output":"event fact base"},
+    {"name":"feedback.list","method":"GET","path":"/scenarios/{scenario_id}/feedback","output":"simulated response feedback"},
+    {"name":"policy.get","method":"GET","path":"/scenarios/{scenario_id}/policy","output":"focus fact, prohibited terms, expected signals"}
+  ],
+  "mcp_mapping": "Each GET resource can be exposed as a read-only MCP tool with scenario_id as its required input. No write or publish tool is provided."
+}
